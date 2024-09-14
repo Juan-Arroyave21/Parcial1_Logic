@@ -29,7 +29,6 @@ public class Program
         decimal comision2 = (venta2 * 10 / 100);
         decimal comision3 = (venta3 * 10 / 100);
         comisionTotal = comision1 + comision2 + comision3;
-
         sueldoTotal = sueldoBasico + comisionTotal;
 
         Console.WriteLine($"El valor de las comisiones recibidas por la venta 1 son de :{comision1:C0}, por la venta 2 son de :{comision2:C0}, y por la venta 3 son de :{comision3:C0}");
@@ -46,7 +45,6 @@ public class Program
         else
         {
             Console.WriteLine($"La venta que le genero mayor comision es: {comisionMayor = venta3:C0}");
-
         }
 
         decimal promedioComisiones = (comisionTotal / 3);

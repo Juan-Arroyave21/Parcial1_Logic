@@ -12,7 +12,8 @@ public class Program
         const decimal sueldoBasico = 1300000;
         decimal comisionTotal;
         decimal sueldoTotal;
-
+        decimal beneficioExtra = 100000;
+        decimal objetivosMes = 1000000;
 
         Console.Write("Ingrese el valor de su primer venta: ");
         decimal venta1 = Convert.ToDecimal(Console.ReadLine());
@@ -20,6 +21,16 @@ public class Program
         decimal venta2 = Convert.ToDecimal(Console.ReadLine());
         Console.Write("Ingrese el valor de su tercer venta: ");
         decimal venta3 = Convert.ToDecimal(Console.ReadLine());
+
+        decimal comision1 = venta1 * (10 / 100);
+        decimal comision2 = venta2 * (10 / 100);
+        decimal comision3 = venta3 * (10 / 100);
+        comisionTotal = comision1 + comision2 + comision3;
+
+        sueldoTotal = sueldoBasico + comisionTotal;
+
+        Console.WriteLine($"El valor de las comisiones recibidaS por la venta 1 son de :{comision1:C0}, por la venta 2 son de :{comision2:C0}, y por la venta 3 son de :{comision3:C0}");
+        Console.WriteLine($"Su sueldo total es de : {sueldoTotal:C0}");
 
 
 

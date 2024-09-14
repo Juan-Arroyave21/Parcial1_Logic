@@ -10,6 +10,22 @@ public class Program
         a = Convert.ToDecimal(Console.ReadLine());
         Console.Write("Ingrese el coeficiente b: ");
         b = Convert.ToDecimal(Console.ReadLine());
-
+ 
+        if (a == 0)
+        {
+            if (b == 0)
+            {
+                Console.WriteLine("La ecuación tiene infinitas soluciones.");
+            }
+            else
+            {
+                Console.WriteLine("La ecuación no tiene solución.");
+            }
+        }
+        else
+        {
+            decimal x = -b / a;
+            Console.WriteLine("La solución es x = " + x);
+        }
     }
 }

@@ -14,6 +14,7 @@ public class Program
         decimal sueldoTotal;
         decimal beneficioExtra = 100000;
         decimal objetivosMes = 1000000;
+        decimal comisionMayor;
 
         Console.Write("Ingrese el valor de su primer venta: ");
         decimal venta1 = Convert.ToDecimal(Console.ReadLine());
@@ -32,5 +33,17 @@ public class Program
         Console.WriteLine($"El valor de las comisiones recibidas por la venta 1 son de :{comision1:C0}, por la venta 2 son de :{comision2:C0}, y por la venta 3 son de :{comision3:C0}");
         Console.WriteLine($"Su sueldo total es de : {sueldoTotal:C0}");
 
+        if (venta1 > venta2 && venta1 > venta3)
+        {
+            Console.WriteLine($"La venta que le genero mayor comision es: {comisionMayor = venta1:C0}");
+        }
+        else if (venta2 > venta1 && venta2 > venta3)
+        {
+            Console.WriteLine($"La venta que le genero mayor comision es: {comisionMayor = venta2:C0}");
+        }
+        else
+        {
+            Console.WriteLine($"La venta que le genero mayor comision es: {comisionMayor = venta3:C0}");
+        }
     }
 }

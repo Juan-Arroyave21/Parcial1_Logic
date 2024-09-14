@@ -5,6 +5,8 @@
  * ¿Cuál fue el promedio de las comisiones que recibió por cada venta?
   Además, la empresa da un beneficio extra de $100.000 si el vendedor supera el objetivo del mes. El objetivo es sumar en las 3 ventas como mínimo $1.000.000 en ventas. Mostrar un mensaje donde indique si ganó o no el beneficio.*/
 
+using System.ComponentModel.Design;
+
 public class Program
 {
     private static void Main(string[] args)
@@ -15,7 +17,7 @@ public class Program
         decimal beneficioExtra = 100000;
         decimal objetivosMes = 1000000;
         decimal comisionMayor;
-
+        
         Console.Write("Ingrese el valor de su primer venta: ");
         decimal venta1 = Convert.ToDecimal(Console.ReadLine());
         Console.Write("Ingrese el valor de su segunda venta: ");
@@ -44,6 +46,15 @@ public class Program
         else
         {
             Console.WriteLine($"La venta que le genero mayor comision es: {comisionMayor = venta3:C0}");
+
+        }
+
+        decimal promedioComisiones = (comisionTotal / 3);
+        Console.WriteLine($"El valor promedio de las comisiones recibidas este mes es de {promedioComisiones:C0}");
+
+        if ((venta1 + venta2 + venta3) >= objetivosMes) ;
+        {
+            Console.WriteLine($"Este mes tienes un beneficio extra de : {beneficioExtra:C0} por superar el objetivo de ventas mensual");
         }
     }
 }
